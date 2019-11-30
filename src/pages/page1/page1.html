@@ -8,8 +8,9 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-input type="text" id="editNome" #editNome></ion-input>
-  <button id="btnCumprimentar" (click)="setUsername(editNome.value)"> Cumprimentar </button>
+  <ion-input type="text" id="editNome" value="" #editNome></ion-input>
   <br>
-  <ng-container>Olá, {{username ? username : 'Fulano'}}!</ng-container>
+  <button ion-button id="btnCumprimentar" (click)="setUsername(editNome.value)"> Cumprimentar </button>
+  <br>
+  <ng-container id="labelMensagem">Alô, {{username ? username : 'Mundo'}}!</ng-container>
 </ion-content>
